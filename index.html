@@ -78,7 +78,7 @@
                     "As Kitty took a tentative step forward, the ground beneath her paws felt cold and damp. \nThe silence was thick, almost suffocating, but then, out of nowhere, a faint rustling sound broke through the quiet. \n"
                     "Kitty's ears perked up, and her eyes widened.\n\n\n Something was moving in the darkness, and it was getting closer.\n\n"
                     "Suddenly, Kitty was faced with a choice. What should she do? \n\n"
-                    "Should she run away, try to find a hiding spot, or maybe see what—or who—was making that noise?\n\n\n"
+                    "Would she be brave, or would she cower in fear?\n\n\n"
                 )
                 
                 document["game_output"].textContent = story_text
@@ -87,7 +87,14 @@
 
         def brave():
             try:
-                document["game_output"].textContent = "You chose to be brave!"
+                document["game_output"].textContent = "You chose to be brave!\n\n\nKitty takes a deep breath, puffing out her chest as she prepares to confront whatever is lurking in the shadows.\n\n\nKitty closed her eyes for a moment and took a deep breath. The cool night air filled her lungs, and she felt a small surge of courage. She wasn’t a big, fierce lion, but she was determined not to let fear control her. Slowly, she opened her eyes and took a step forward, her tiny body trembling slightly but her heart filled with resolve.
+                As Kitty stepped closer to the source of the growl, the shadows around her seemed to part, revealing a pair of glowing eyes peering at her from the darkness. The creature emerged, and Kitty found herself face to face with… another cat!\n             
+                This cat was larger, with sleek black fur that blended into the night. Its eyes, a bright amber, glinted in the dim light. For a moment, Kitty hesitated, but then she realized that the growl she had heard wasn’t one of menace. The cat before her wasn’t a monster—it was a fellow traveler, caught in this strange, spooky place just like she was.\n
+                The black cat looked at Kitty curiously, tilting its head as if to ask, 'What are you doing here?' Kitty, feeling a little braver now, puffed out her chest and meowed softly. The larger cat blinked slowly, a sign of friendship in the feline world, and stepped closer.\n        
+                With a flick of its tail, the black cat gestured for Kitty to follow. Together, they walked through the shadowy forest until they reached a fork in the path. To the left, a narrow, winding trail led deeper into the forest, where the trees grew even denser and the shadows thicker. To the right, a dark, rocky cave entrance loomed, its gaping mouth seeming to swallow the moonlight.\n
+                Kitty paused, glancing between the two paths. The black cat turned to her, as if asking, “Which way shall we go?” Both options were filled with uncertainty and possibly danger, but also the promise of new discoveries."
+                
+                Kitty knew she had to make another decision."
                 document["brave_button"].style.display = "none"
                 document["scared_button"].style.display = "none"
                 document["forest_button"].style.display = "inline-block"
@@ -97,7 +104,7 @@
 
         def scared():
             try:
-                document["game_output"].textContent = "You chose to cower. Game over!"
+                document["game_output"].textContent = "You chose to cower in fear.\n\n\nOvercome with terror, Kitty curls up into a tight ball, hoping that whatever is out there won’t find her..\n\n\n\n\n\n Game over!\n\n\n\n\n\n"
                 document["brave_button"].style.display = "none"
                 document["scared_button"].style.display = "none"
             except Exception as e:
