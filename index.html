@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitty's Worst Nightmare</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- External Brython Script with Local Fallback -->
-    <script type="text/javascript">
-        if (!window.brython) {
-            document.write('<script src="brython.min.js"><\/script>');
-        }
-    </script>
+    <!-- Brython Script -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"></script>
 </head>
 <body onload="brython()">
@@ -39,8 +34,9 @@
     <button id="take_button" style="display: none;" onclick="takeMagicFishBone()">Take the Magic Fish Bone</button>
     <button id="leave_button" style="display: none;" onclick="leaveBone()">Leave the Bone</button>
 
+    <!-- Brython Python Script -->
     <script type="text/python">
-        from browser import document, alert
+        from browser import document, window, alert
         
         def startGame():
             try:
@@ -104,6 +100,15 @@
                 document["leave_button"].style.display = "none"
             except Exception as e:
                 alert(f"Error in leaveBone: {e}")
+
+        # Expose the Python functions to the global window object
+        window.startGame = startGame
+        window.brave = brave
+        window.scared = scared
+        window.takeForestPath = takeForestPath
+        window.takeCavePath = takeCavePath
+        window.takeMagicFishBone = takeMagicFishBone
+        window.leaveBone = leaveBone
     </script>
 
     <footer>
