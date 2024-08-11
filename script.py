@@ -1,10 +1,9 @@
-from browser import document, alert
+from browser import document
 
 def run_game():
     user_input = document["user_input"].value
     document["game_output"].text = f"Hello, {user_input}! Welcome to Kitty's Worst Nightmare!"
 
-document["game_output"].text = "Enter your name to start the game."
 
 class AsciiArt:
     def __init__(self):
