@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitty's Worst Nightmare</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- External Brython Script with Local Fallback -->
+    <script type="text/javascript">
+        if (!window.brython) {
+            document.write('<script src="brython.min.js"><\/script>');
+        }
+    </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"></script>
 </head>
 <body onload="brython()">
@@ -34,48 +40,70 @@
     <button id="leave_button" style="display: none;" onclick="leaveBone()">Leave the Bone</button>
 
     <script type="text/python">
-        from browser import document
+        from browser import document, alert
         
         def startGame():
-            document["play_now_button"].style.display = "none"
-            document["brave_button"].style.display = "inline-block"
-            document["scared_button"].style.display = "inline-block"
+            try:
+                document["play_now_button"].style.display = "none"
+                document["brave_button"].style.display = "inline-block"
+                document["scared_button"].style.display = "inline-block"
+                document["game_output"].textContent = "The game has started!"
+            except Exception as e:
+                alert(f"Error in startGame: {e}")
         
         def brave():
-            document["game_output"].textContent = "You chose to be brave!"
-            document["brave_button"].style.display = "none"
-            document["scared_button"].style.display = "none"
-            document["forest_button"].style.display = "inline-block"
-            document["cave_button"].style.display = "inline-block"
+            try:
+                document["game_output"].textContent = "You chose to be brave!"
+                document["brave_button"].style.display = "none"
+                document["scared_button"].style.display = "none"
+                document["forest_button"].style.display = "inline-block"
+                document["cave_button"].style.display = "inline-block"
+            except Exception as e:
+                alert(f"Error in brave: {e}")
         
         def scared():
-            document["game_output"].textContent = "You chose to stay home. Game over!"
-            document["brave_button"].style.display = "none"
-            document["scared_button"].style.display = "none"
+            try:
+                document["game_output"].textContent = "You chose to stay home. Game over!"
+                document["brave_button"].style.display = "none"
+                document["scared_button"].style.display = "none"
+            except Exception as e:
+                alert(f"Error in scared: {e}")
         
         def takeForestPath():
-            document["game_output"].textContent = "You took the forest path..."
-            document["forest_button"].style.display = "none"
-            document["cave_button"].style.display = "none"
-            document["take_button"].style.display = "inline-block"
-            document["leave_button"].style.display = "inline-block"
+            try:
+                document["game_output"].textContent = "You took the forest path..."
+                document["forest_button"].style.display = "none"
+                document["cave_button"].style.display = "none"
+                document["take_button"].style.display = "inline-block"
+                document["leave_button"].style.display = "inline-block"
+            except Exception as e:
+                alert(f"Error in takeForestPath: {e}")
         
         def takeCavePath():
-            document["game_output"].textContent = "You took the cave path..."
-            document["forest_button"].style.display = "none"
-            document["cave_button"].style.display = "none"
-            document["take_button"].style.display = "inline-block"
-            document["leave_button"].style.display = "inline-block"
+            try:
+                document["game_output"].textContent = "You took the cave path..."
+                document["forest_button"].style.display = "none"
+                document["cave_button"].style.display = "none"
+                document["take_button"].style.display = "inline-block"
+                document["leave_button"].style.display = "inline-block"
+            except Exception as e:
+                alert(f"Error in takeCavePath: {e}")
         
         def takeMagicFishBone():
-            document["game_output"].textContent = "You took the Magic Fish Bone! Victory!"
-            document["take_button"].style.display = "none"
-            document["leave_button"].style.display = "none"
+            try:
+                document["game_output"].textContent = "You took the Magic Fish Bone! Victory!"
+                document["take_button"].style.display = "none"
+                document["leave_button"].style.display = "none"
+            except Exception as e:
+                alert(f"Error in takeMagicFishBone: {e}")
         
         def leaveBone():
-            document["game_output"].textContent = "You left the bone. Maybe next time!"
-            document["take_button"].style.display = "none"
-            document["leave_button"].style.display = "none"
+            try:
+                document["game_output"].textContent = "You left the bone. Maybe next time!"
+                document["take_button"].style.display = "none"
+                document["leave_button"].style.display = "none"
+            except Exception as e:
+                alert(f"Error in leaveBone: {e}")
     </script>
 
     <footer>
