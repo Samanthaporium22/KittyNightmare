@@ -160,8 +160,9 @@
 
         def takeCavePath():
             try:
-                #Cave path story
-                cave_text = ("You took the cave path...\n\n\n"
+                # Cave path story
+                cave_text = (
+                    "You took the cave path...\n\n\n"
                     "Kitty took a deep breath, her tiny chest rising and falling as she made her decision. \n"
                     "Instead of fleeing or taking the path through the dense forest, she noticed a narrow, dark opening in the side of a hill just off the main path, a cave. \n"
                     "Her curiosity overcame her fear, and with cautious steps, she approached the cave's entrance.\n\n\n"
@@ -175,7 +176,7 @@
                     "In the center of the cavern, resting on a stone pedestal, was a fishbone that glowed with a soft, blue light, just like the one in the forest path. \n"
                     "Kitty’s eyes widened in amazement as she approached it.\n\n\n"        
                     "As she drew near, a soft voice echoed through the cavern, barely more than a whisper. \n"
-                    "Take the magic fishbone, and the way home will be clear." Kitty hesitated for only a moment before carefully picking up the fishbone with her paw.\n\n\n"
+                    "'Take the magic fishbone, and the way home will be clear.' Kitty hesitated for only a moment before carefully picking up the fishbone with her paw.\n\n\n"
                 )
                 document["game_output"].textContent = cave_text 
                 document["forest_button"].style.display = "none"
@@ -184,6 +185,7 @@
                 document["leave_button"].style.display = "inline-block"
             except Exception as e:
                 alert(f"Error in takeCavePath: {e}")
+        
 
         def takeMagicFishBone():
             try:
