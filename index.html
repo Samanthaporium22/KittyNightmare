@@ -75,4 +75,82 @@
                     "\nKitty’s heart began to race. She was alone in this strange, spooky place, and a creeping feeling of dread began to settle over her.\n"
                     "This wasn’t like the garden she loved to explore during the day. \n"
                     "There were no familiar smells, no comforting chirps of birds or the gentle rustling of leaves in the breeze. Everything was still—too still.\n"
-                    "\nAs Kitty took a tentative step forward, the ground beneath her paws felt cold and damp. The silence was thick, almost suffocating, but then, out of nowhere,
+                    "\nAs Kitty took a tentative step forward, the ground beneath her paws felt cold and damp. The silence was thick, almost suffocating, but then, out of nowhere, a faint rustling sound broke through the quiet. \n"
+                    "\nKitty's ears perked up, and her eyes widened. Something was moving in the darkness, and it was getting closer.\n"
+                    "\nSuddenly, Kitty was faced with a choice. What should she do? \n"
+                    "Should she run away, try to find a hiding spot, or maybe see what—or who—was making that noise?\n"
+                )
+                
+                document["game_output"].textContent = story_text
+            except Exception as e:
+                alert(f"Error in startGame: {e}")
+
+        def brave():
+            try:
+                document["game_output"].textContent = "You chose to be brave!"
+                document["brave_button"].style.display = "none"
+                document["scared_button"].style.display = "none"
+                document["forest_button"].style.display = "inline-block"
+                document["cave_button"].style.display = "inline-block"
+            except Exception as e:
+                alert(f"Error in brave: {e}")
+
+        def scared():
+            try:
+                document["game_output"].textContent = "You chose to stay home. Game over!"
+                document["brave_button"].style.display = "none"
+                document["scared_button"].style.display = "none"
+            except Exception as e:
+                alert(f"Error in scared: {e}")
+
+        def takeForestPath():
+            try:
+                document["game_output"].textContent = "You took the forest path..."
+                document["forest_button"].style.display = "none"
+                document["cave_button"].style.display = "none"
+                document["take_button"].style.display = "inline-block"
+                document["leave_button"].style.display = "inline-block"
+            except Exception as e:
+                alert(f"Error in takeForestPath: {e}")
+
+        def takeCavePath():
+            try:
+                document["game_output"].textContent = "You took the cave path..."
+                document["forest_button"].style.display = "none"
+                document["cave_button"].style.display = "none"
+                document["take_button"].style.display = "inline-block"
+                document["leave_button"].style.display = "inline-block"
+            except Exception as e:
+                alert(f"Error in takeCavePath: {e}")
+
+        def takeMagicFishBone():
+            try:
+                document["game_output"].textContent = "You took the Magic Fish Bone! Victory!"
+                document["take_button"].style.display = "none"
+                document["leave_button"].style.display = "none"
+            except Exception as e:
+                alert(f"Error in takeMagicFishBone: {e}")
+
+        def leaveBone():
+            try:
+                document["game_output"].textContent = "You left the bone. Maybe next time!"
+                document["take_button"].style.display = "none"
+                document["leave_button"].style.display = "none"
+            except Exception as e:
+                alert(f"Error in leaveBone: {e}")
+
+        # Expose the Python functions to the global window object
+        window.startGame = startGame
+        window.brave = brave
+        window.scared = scared
+        window.takeForestPath = takeForestPath
+        window.takeCavePath = takeCavePath
+        window.takeMagicFishBone = takeMagicFishBone
+        window.leaveBone = leaveBone
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Kitty's Worst Nightmare. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
