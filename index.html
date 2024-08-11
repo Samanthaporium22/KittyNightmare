@@ -111,8 +111,8 @@
                     "Kitty paused, glancing between the two paths. \nThe black cat turned to her, as if asking, 'Which way shall we go?'\n\n"
                     "Both options were filled with uncertainty and possibly danger, but also the promise of new discoveries.\n\n\n"
                     "Kitty knew she had to make another decision.\n\n"
-        
                 )
+        
                 document["game_output"].textContent = brave_text
                 document["brave_button"].style.display = "none"
                 document["scared_button"].style.display = "none"
@@ -132,6 +132,9 @@
 
         def takeForestPath():
             try:
+                # Forest path Story text
+                forestpath_text = (
+                )
                 document["game_output"].textContent = "You took the forest path..."
                 document["forest_button"].style.display = "none"
                 document["cave_button"].style.display = "none"
