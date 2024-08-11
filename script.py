@@ -86,4 +86,62 @@ class Game:
     def scene2(self):
         scene_description = """
         Whiskers ventures out into the unknown world. The path splits into two:
-        One path leads to the mysterious forest, the other
+        One path leads to the mysterious forest, the other to the dark cave.
+        """
+        scene = Scene(scene_description, self.ascii_art.get_kitty())
+        scene.show()
+
+        # Set up interaction for choosing the path
+        forest_button = document["forest_button"]
+        forest_button.bind("click", self.forest_path)
+
+        cave_button = document["cave_button"]
+        cave_button.bind("click", self.cave_path)
+
+    def forest_path(self, event):
+        document["game_output"] <= html.P("\nWhiskers heads to the forest.")
+        document["game_output"] <= html.P("No further implementation of the forest scene yet...")
+
+    def cave_path(self, event):
+        document["game_output"] <= html.P("\nWhiskers heads into the cave.")
+        self.scene3()
+
+    def scene3(self):
+        scene_description = """
+        Inside the dark cave, Whiskers finds a magic fish bone.
+        It's glowing with a strange light. Should Whiskers take it?
+        """
+        scene = Scene(scene_description, self.ascii_art.get_kitty())
+        scene.show()
+
+        take_button = document["take_button"]
+        take_button.bind("click", self.take_fish_bone)
+
+        leave_button = document["leave_button"]
+        leave_button.bind("click", self.leave_fish_bone)
+
+    def take_fish_bone(self, event):
+        document["game_output"] <= html.P("\nWhiskers takes the magic fish bone and suddenly... all the fish return to the world!")
+        self.win_game()
+
+    def leave_fish_bone(self, event):
+        document["game_output"] <= html.P("\nWhiskers decides to leave the bone. The fish remain lost forever...")
+        self.end_game()
+
+    def win_game(self):
+        document["game_output"] <= html.P("\nCongratulations! Whiskers has restored the fish to the world!")
+        document["game_output"] <= html.P(self.ascii_art.get_kitty())
+        document["game_output"] <= html.P("The End.")
+
+    def end_game(self):
+        document["game_output"] <= html.P("\nThe adventure ends here. Better luck next time!")
+        document["game_output"] <= html.P(self.ascii_art.get_kitty())
+
+
+# Start the game when the button is clicked
+def start_game(event):
+    game = Game()
+    game.start()
+
+# Bind the start game function to the button
+document["start_button"].bind("click", start_game)
