@@ -55,36 +55,39 @@
         from browser import document, window, alert
  
         def startGame():
-            try:
-                document["play_now_button"].style.display = "none"
-                document["brave_button"].style.display = "inline-block"
-                document["scared_button"].style.display = "inline-block"
-                
-                # ASCII art for a simple cat
-                ascii_art = r"""
-                /\_/\  
-               ( o.o ) 
-                > ^ <
-                """
-                
-                document["game_output"].textContent = f"The game has started!\n{ascii_art}\n
-                \nWhiskers twitched. Paws stirred. Kitty was having a dream—a dream that was not like any she had ever had before. \n
-                The soft warmth of her cozy bed was a distant memory as she found herself standing in the middle of a shadowy forest. \n
-                The towering trees around her loomed like dark giants, their twisted branches clawing at the sky. \n
-                The moon, usually a friendly beacon of light, was barely a sliver, casting eerie shadows that danced on the forest floor.\n
-                \n
-                Kitty\’s heart began to race. She was alone in this strange, spooky place, and a creeping feeling of dread began to settle over her.\n 
-                This wasn\’t like the garden she loved to explore during the day. \n
-                There were no familiar smells, no comforting chirps of birds or the gentle rustling of leaves in the breeze. Everything was still—too still.\n
-                \n
-                As Kitty took a tentative step forward, the ground beneath her paws felt cold and damp. The silence was thick, almost suffocating, but then, out of nowhere, a faint rustling sound broke through the quiet. \n
-                \n
-                Kitty's ears perked up, and her eyes widened. Something was moving in the darkness, and it was getting closer.\n
-                \n
-                Suddenly, Kitty was faced with a choice. What should she do? \n
-                Should she run away, try to find a hiding spot, or maybe see what—or who—was making that noise?\n"
-            except Exception as e:
-                alert(f"Error in startGame: {e}")        
+        try:
+            document["play_now_button"].style.display = "none"
+            document["brave_button"].style.display = "inline-block"
+            document["scared_button"].style.display = "inline-block"
+            
+            # ASCII art for a simple cat
+            ascii_art = r"""
+            /\_/\  
+           ( o.o ) 
+            > ^ <
+            """
+            
+            # Story text
+            story_text = (
+                "The game has started!\n"
+                f"{ascii_art}\n"
+                "\nWhiskers twitched. Paws stirred. Kitty was having a dream—a dream that was not like any she had ever had before. \n"
+                "The soft warmth of her cozy bed was a distant memory as she found herself standing in the middle of a shadowy forest. \n"
+                "The towering trees around her loomed like dark giants, their twisted branches clawing at the sky. \n"
+                "The moon, usually a friendly beacon of light, was barely a sliver, casting eerie shadows that danced on the forest floor.\n"
+                "\nKitty’s heart began to race. She was alone in this strange, spooky place, and a creeping feeling of dread began to settle over her.\n"
+                "This wasn’t like the garden she loved to explore during the day. \n"
+                "There were no familiar smells, no comforting chirps of birds or the gentle rustling of leaves in the breeze. Everything was still—too still.\n"
+                "\nAs Kitty took a tentative step forward, the ground beneath her paws felt cold and damp. The silence was thick, almost suffocating, but then, out of nowhere, a faint rustling sound broke through the quiet. \n"
+                "\nKitty's ears perked up, and her eyes widened. Something was moving in the darkness, and it was getting closer.\n"
+                "\nSuddenly, Kitty was faced with a choice. What should she do? \n"
+                "Should she run away, try to find a hiding spot, or maybe see what—or who—was making that noise?\n"
+            )
+            
+            document["game_output"].textContent = story_text
+        except Exception as e:
+            alert(f"Error in startGame: {e}")
+        
         
         def brave():
             try:
