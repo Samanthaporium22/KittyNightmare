@@ -156,7 +156,7 @@ class Game:
 
 
 # To start the game
-if __name__ == "__main__":
-    game = Game()
-    game.start()
+#if __name__ == "__main__":
+#    game = Game()
+#    game.start()
 
