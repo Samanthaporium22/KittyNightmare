@@ -25,16 +25,20 @@
 
     <div id="game_output"></div>
 
-    <!-- Buttons for interactions -->
-    <button id="start_button">Start Game</button>
-    <button id="brave_button">Be Brave</button>
-    <button id="scared_button">Stay Home</button>
-    <button id="forest_button">Take Forest Path</button>
-    <button id="cave_button">Take Cave Path</button>
-    <button id="take_button">Take the Magic Fish Bone</button>
-    <button id="leave_button">Leave the Bone</button>
+    <!-- Game interaction buttons -->
+    <button id="brave_button" style="display: none;">Be Brave</button>
+    <button id="scared_button" style="display: none;">Stay Home</button>
+    <button id="forest_button" style="display: none;">Take Forest Path</button>
+    <button id="cave_button" style="display: none;">Take Cave Path</button>
+    <button id="take_button" style="display: none;">Take the Magic Fish Bone</button>
+    <button id="leave_button" style="display: none;">Leave the Bone</button>
 
-    <script type="text/python" src="script.py"></script>
+    <script type="text/python">
+        def startGame():
+            document["play_now_button"].style.display = "none"
+            document["brave_button"].style.display = "inline-block"
+            document["scared_button"].style.display = "inline-block"
+    </script>
 
     <footer>
         <p>&copy; 2024 Kitty's Worst Nightmare. All Rights Reserved.</p>
