@@ -101,8 +101,8 @@
                     "Its eyes, a bright amber, glinted in the dim light. \n\n"
                     "For a moment, Kitty hesitated, but then she realized that the growl she had heard wasn’t one of menace.\n"
                     "The cat before her wasn’t a monster, it was a fellow traveler, caught in this strange, spooky place just like she was.\n"
-                    "The black cat looked at Kitty curiously, tilting its head as if to ask, 'What are you doing here?' \n"
-                    "Kitty, feeling a little braver now, puffed out her chest and meowed softly.\n"
+                    "The black cat looked at Kitty curiously, tilting its head as if to ask, 'What are you doing here?' \n\n"
+                    "Kitty, feeling a little braver now, puffed out her chest and meowed softly.\n\n"
                     "The larger cat blinked slowly, a sign of friendship in the feline world, and stepped closer.\n"
                     "With a flick of its tail, the black cat gestured for Kitty to follow.\n\n"
                     "Together, they walked through the shadowy forest until they reached a fork in the path.\n" 
@@ -133,8 +133,23 @@
         def takeForestPath():
             try:
                 # Forest path Story text
-                forestpath_text = ("You took the forest path..."
+                forestpath_text = ("You took the forest path...\n\n\n"
+                    "Kitty/'s heart pounded in her tiny chest, but she steeled herself with a deep breath. She wasn't going to let fear get the best of her. \n"
+                    "Gathering her courage, she turned away from the menacing sound and chose the narrow path that wound through the forest. \n"
+                    "The path was barely visible under the thick canopy of twisted branches above, but Kitty pressed on, her paws moving with quiet determination.\n"
+                    "The trees seemed to close in around her as she walked, their branches whispering like hushed voices. \n"
+                    "The air grew colder, and the shadows deepened, but Kitty kept her eyes focused ahead. \n"
+                    "She wasn’t sure where the path would lead, but anything was better than standing still in that eerie place.\n\n\n"
+                    "After what felt like hours of walking, Kitty noticed a faint glow in the distance. \n"
+                    "It was a soft, warm light, flickering like a candle. Curiosity piqued, she quickened her pace, her paws making almost no sound on the damp forest floor. \n"
+                    "As she drew closer, the light grew brighter, and she soon found herself at the edge of a small clearing.\n\n\n"
+                    "In the center of the clearing stood a stone pedestal, and atop it rested a delicate fishbone, \n"
+                    "glowing with an ethereal blue light. Kitty’s eyes widened in wonder as she cautiously approached the pedestal. \n"
+                    "The fishbone was unlike anything she had ever seen—its intricate details seemed to shimmer and shift in the dim light.\n\n\n"
+                    "As Kitty gazed at the fishbone, a sudden gust of wind swept through the clearing, carrying with it the faintest whisper of a voice. \n"
+                    "Take the magic fishbone, and all will be revealed, the voice seemed to say. Kitty hesitated for only a moment before reaching out with a trembling paw.\n\n\n"
                 )
+        
                 document["game_output"].textContent = forestpath_text
                 document["forest_button"].style.display = "none"
                 document["cave_button"].style.display = "none"
@@ -145,7 +160,25 @@
 
         def takeCavePath():
             try:
-                document["game_output"].textContent = "You took the cave path..."
+                #Cave path story
+                cave_text = (
+                    "You took the cave path...\n\n\n"
+                    "Kitty took a deep breath, her tiny chest rising and falling as she made her decision. \n"
+                    "Instead of fleeing or taking the path through the dense forest, she noticed a narrow, dark opening in the side of a hill just off the main path, a cave. \n"
+                    "Her curiosity overcame her fear, and with cautious steps, she approached the cave's entrance.\n\n\n"
+                    "The mouth of the cave was almost hidden by thick vines, but Kitty managed to squeeze through, her fur brushing against the cold stone walls. \n"
+                    "Inside, the air was damp and cool, carrying the faint scent of moss and earth.\n "
+                    "The deeper Kitty ventured, the more the darkness swallowed her, but she continued forward, guided by some instinct she couldn’t explain.\n\n\n"                   
+                    "The cave was eerily silent, except for the occasional drip of water echoing through the tunnels. \n"
+                    "As Kitty navigated the winding passages, she noticed the walls beginning to glow with a faint, otherworldly light. \n"
+                    "She followed the light, her paws moving quickly now, as if the cave itself was urging her forward.\n\n\n"
+                    "Finally, the tunnel opened into a large cavern, its walls shimmering with bioluminescent moss.\n "
+                    "In the center of the cavern, resting on a stone pedestal, was a fishbone that glowed with a soft, blue light, just like the one in the forest path. \n"
+                    "Kitty’s eyes widened in amazement as she approached it.\n\n\n"        
+                    "As she drew near, a soft voice echoed through the cavern, barely more than a whisper. \n"
+                    "Take the magic fishbone, and the way home will be clear." Kitty hesitated for only a moment before carefully picking up the fishbone with her paw.\n\n\n"
+                )
+                document["game_output"].textContent = cave_text 
                 document["forest_button"].style.display = "none"
                 document["cave_button"].style.display = "none"
                 document["take_button"].style.display = "inline-block"
@@ -155,7 +188,20 @@
 
         def takeMagicFishBone():
             try:
-                document["game_output"].textContent = "You took the Magic Fish Bone! Victory!"
+                fishbone_text = (
+                    "You took the Magic Fish Bone! \n\n\n"
+
+                    "Just as her paw touched the fishbone, the ground beneath her trembled, and a swirl of light enveloped her. \n"
+                    "Everything around her dissolved into a cascade of colors, and before she knew it, she was no longer in the dark.\n\n "
+        
+                    "Instead, she found herself back in the familiar warmth of her bed, the fishbone clutched tightly in her paw.\n\n"
+
+                    "Kitty blinked, the dream fading from her mind like morning mist. \n"
+                    "But as she looked down, she saw the faint glow of the fishbone in her paw, and she knew that somehow, some way, the magic had been real. \n"
+                    "With a contented purr, Kitty nestled back into her bed, the comfort of home settling over her like a warm blanket.\n\n\n"
+                )
+        
+                document["game_output"].textContent = fishbone_text
                 document["take_button"].style.display = "none"
                 document["leave_button"].style.display = "none"
             except Exception as e:
@@ -163,7 +209,19 @@
 
         def leaveBone():
             try:
-                document["game_output"].textContent = "You left the bone. Maybe next time!"
+                boneend_text = (
+                    "Suddenly everything began to dissolve into a hazy mist. \n"
+                    "The shadows melted away, and the cold, damp ground beneath her paws was replaced by the soft, warm sheets of her bed. \n"
+                    "The dream faded like morning fog, leaving only the faintest memory of what had happened.\n\n\n"
+                    "Kitty stirred, blinking sleepily as she realized she was back home, safe and sound.\n "
+                    "She stretched out in the warmth of her bed, a soft purr rumbling in her chest. \n"
+                    "The mysterious place, the glowing fishbone, and the strange voice all seemed like distant echoes now, fading quickly as she woke.\n\n\n"
+                    "With a contented sigh, Kitty curled up, her paws tucked beneath her, and closed her eyes once more. \n"
+                    "Maybe next time, she thought, as she drifted back into a peaceful sleep, dreaming of sunny gardens and gentle breezes. \n"
+                    "There was always tomorrow, always another dream, another chance to explore the unknown.\n\n\n"
+                    "But for now, she was home, and that was all that mattered.\n"
+                )
+                document["game_output"].textContent = boneend_text
                 document["take_button"].style.display = "none"
                 document["leave_button"].style.display = "none"
             except Exception as e:
