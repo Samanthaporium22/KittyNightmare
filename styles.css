@@ -1,6 +1,6 @@
 body {
     background-color: #FFE6F2;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Georgia', serif;
     color: #5B4B49;
     margin: 0;
     padding: 0;
@@ -14,6 +14,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
 }
 nav {
     margin: 20px 0;
@@ -26,6 +27,7 @@ nav a {
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 1.2em;
+    font-family: 'Georgia', serif;
 }
 section {
     margin: 20px;
@@ -36,11 +38,13 @@ section {
 }
 section h2 {
     font-size: 2.5em;
+    font-family: 'Georgia', serif;
 }
 footer {
     background-color: #FFB6C1;
     padding: 10px;
     border-top: 5px solid #FF69B4;
+    font-family: 'Georgia', serif;
 }
 footer p {
     margin: 0;
@@ -58,6 +62,7 @@ button {
     cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Georgia', serif;
 }
 button:hover {
     background-color: #FF69B4;
