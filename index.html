@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <title>https://samanthaporium22.github.io/</title>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<head>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"></script>
+</head>
+<body onload="brython()">
+    <h1>Hello Kitten Game</h1>
+    <pre id="game_output"></pre>
+    <input type="text" id="user_input">
+    <button onclick="run_game()">Run Game</button>
+
+    <script type="text/python">
+    def run_game():
+        output = document["game_output"]
+        user_input = document["user_input"].value
+        output.text = "You typed: " + user_input
+
+    </script>
 </body>
 </html>
