@@ -6,6 +6,7 @@ body {
     padding: 0;
     text-align: center;
 }
+
 header h1 {
     font-family: 'Lora', serif;
 }
@@ -13,6 +14,7 @@ header h1 {
 nav {
     margin: 20px 0;
 }
+
 nav a {
     margin: 0 10px;
     text-decoration: none;
@@ -23,6 +25,7 @@ nav a {
     font-size: 1.2em;
     font-family: 'Georgia', serif;
 }
+
 section {
     margin: 20px;
     padding: 20px;
@@ -30,21 +33,25 @@ section {
     border-radius: 20px;
     box-shadow: 0px 0px 15px 0px #FFB6C1;
 }
+
 section h2 {
     font-size: 2.5em;
     font-family: 'Georgia', serif;
 }
+
 footer {
     background-color: #FFB6C1;
     padding: 10px;
     border-top: 5px solid #FF69B4;
     font-family: 'Georgia', serif;
 }
+
 footer p {
     margin: 0;
     font-size: 1em;
     color: #5B4B49;
 }
+
 button {
     background-color: #FFB6C1;
     color: #FFFFFF;
@@ -58,21 +65,34 @@ button {
     transition: background-color 0.3s, transform 0.3s;
     font-family: 'Georgia', serif;
 }
+
 button:hover {
     background-color: #FF69B4;
     transform: translateY(-3px);
 }
+
 #game_output {
-background-color: #44475a;
-padding: 20px;
-margin: 20px auto;
-width: 80%;
-max-width: 600px;
-border-radius: 10px;
-text-align: left;
-white-space: pre-wrap; /* This keeps the new lines and spaces intact */
-font-family: 'Courier New', Courier, monospace;
-font-size: 16px;
-color: #50fa7b;
+    background-color: #FFF0F5;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+    text-align: left;
+    white-space: pre-wrap; /* This keeps the new lines and spaces intact */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: #5B4B49;
+    box-shadow: 0px 0px 15px 0px #FFB6C1;
+}
+
+#game_output::before {
+    content: "✨ Kitty's Adventure ✨";
+    display: block;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 1.5em;
+    color: #FF69B4;
+    margin-bottom: 10px;
 }
 
