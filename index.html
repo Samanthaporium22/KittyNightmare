@@ -26,18 +26,56 @@
     <div id="game_output"></div>
 
     <!-- Game interaction buttons -->
-    <button id="brave_button" style="display: none;">Be Brave</button>
-    <button id="scared_button" style="display: none;">Stay Home</button>
-    <button id="forest_button" style="display: none;">Take Forest Path</button>
-    <button id="cave_button" style="display: none;">Take Cave Path</button>
-    <button id="take_button" style="display: none;">Take the Magic Fish Bone</button>
-    <button id="leave_button" style="display: none;">Leave the Bone</button>
+    <button id="brave_button" style="display: none;" onclick="brave()">Be Brave</button>
+    <button id="scared_button" style="display: none;" onclick="scared()">Stay Home</button>
+    <button id="forest_button" style="display: none;" onclick="takeForestPath()">Take Forest Path</button>
+    <button id="cave_button" style="display: none;" onclick="takeCavePath()">Take Cave Path</button>
+    <button id="take_button" style="display: none;" onclick="takeMagicFishBone()">Take the Magic Fish Bone</button>
+    <button id="leave_button" style="display: none;" onclick="leaveBone()">Leave the Bone</button>
 
     <script type="text/python">
+        from browser import document
+        
         def startGame():
             document["play_now_button"].style.display = "none"
             document["brave_button"].style.display = "inline-block"
             document["scared_button"].style.display = "inline-block"
+        
+        def brave():
+            document["game_output"].textContent = "You chose to be brave!"
+            document["brave_button"].style.display = "none"
+            document["scared_button"].style.display = "none"
+            document["forest_button"].style.display = "inline-block"
+            document["cave_button"].style.display = "inline-block"
+        
+        def scared():
+            document["game_output"].textContent = "You chose to stay home. Game over!"
+            document["brave_button"].style.display = "none"
+            document["scared_button"].style.display = "none"
+        
+        def takeForestPath():
+            document["game_output"].textContent = "You took the forest path..."
+            document["forest_button"].style.display = "none"
+            document["cave_button"].style.display = "none"
+            document["take_button"].style.display = "inline-block"
+            document["leave_button"].style.display = "inline-block"
+        
+        def takeCavePath():
+            document["game_output"].textContent = "You took the cave path..."
+            document["forest_button"].style.display = "none"
+            document["cave_button"].style.display = "none"
+            document["take_button"].style.display = "inline-block"
+            document["leave_button"].style.display = "inline-block"
+        
+        def takeMagicFishBone():
+            document["game_output"].textContent = "You took the Magic Fish Bone! Victory!"
+            document["take_button"].style.display = "none"
+            document["leave_button"].style.display = "none"
+        
+        def leaveBone():
+            document["game_output"].textContent = "You left the bone. Maybe next time!"
+            document["take_button"].style.display = "none"
+            document["leave_button"].style.display = "none"
     </script>
 
     <footer>
