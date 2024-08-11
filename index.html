@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitty's Worst Nightmare</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"></script>
 </head>
 <body onload="brython()">
-    <h1>Hello Kitten Game</h1>
-    <pre id="game_output"></pre>
+    <h1>Welcome to Kitty's Worst Nightmare</h1>
+    <div id="game_output"></div>
     <input type="text" id="user_input">
-    <button onclick="run_game()">Run Game</button>
+    <button onclick="run_game()">Start Game</button>
 
-    <script type="text/python">
-    def run_game():
-        output = document["game_output"]
-        user_input = document["user_input"].value
-        output.text = "You typed: " + user_input
-
-    </script>
+    <!-- Include your Python script -->
+    <script type="text/python" src="script.py"></script>
 </body>
 </html>
