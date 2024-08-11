@@ -38,22 +38,22 @@
     <script type="text/python">
         from browser import document, window, alert
  
-    def startGame():
-        try:
-            document["play_now_button"].style.display = "none"
-            document["brave_button"].style.display = "inline-block"
-            document["scared_button"].style.display = "inline-block"
-            
-            # ASCII art for a simple cat
-            ascii_art = r"""
-            /\_/\  
-           ( o.o ) 
-            > ^ <
-            """
-            
-            document["game_output"].textContent = f"The game has started!\n{ascii_art}"
-        except Exception as e:
-            alert(f"Error in startGame: {e}")        
+        def startGame():
+            try:
+                document["play_now_button"].style.display = "none"
+                document["brave_button"].style.display = "inline-block"
+                document["scared_button"].style.display = "inline-block"
+                
+                # ASCII art for a simple cat
+                ascii_art = r"""
+                /\_/\  
+               ( o.o ) 
+                > ^ <
+                """
+                
+                document["game_output"].textContent = f"The game has started!\n{ascii_art}"
+            except Exception as e:
+                alert(f"Error in startGame: {e}")        
         
         def brave():
             try:
