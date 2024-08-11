@@ -1,21 +1,15 @@
 body {
     background-color: #FFE6F2;
-    font-family: 'Georgia', serif;
+    font-family: 'Merriweather', serif;
     color: #5B4B49;
     margin: 0;
     padding: 0;
     text-align: center;
 }
-header {
-    background-color: #FFB6C1;
-    padding: 20px;
-    border-bottom: 5px solid #FF69B4;
-}
 header h1 {
-    margin: 0;
-    font-size: 3em;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Lora', serif;
 }
+
 nav {
     margin: 20px 0;
 }
