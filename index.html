@@ -96,7 +96,7 @@
                     "She wasn’t a big, fierce lion, but she was determined not to let fear control her.\n"
                     "Slowly, she opened her eyes and took a step forward, her tiny body trembling slightly but her heart filled with resolve.\n"
                     "As Kitty stepped closer to the source of the growl, the shadows around her seemed to part, revealing a pair of glowing eyes peering at her from the darkness.\n"
-                    "The creature emerged, and Kitty found herself face to face with… another cat!\U+1F431\n"
+                    "The creature emerged, and Kitty found herself face to face with… another cat!\n"
                     "This cat was larger, with sleek black fur that blended into the night.\n"
                     "Its eyes, a bright amber, glinted in the dim light. \n\n"
                     "For a moment, Kitty hesitated, but then she realized that the growl she had heard wasn’t one of menace.\n"
@@ -133,9 +133,9 @@
         def takeForestPath():
             try:
                 # Forest path Story text
-                forestpath_text = (
+                forestpath_text = ("You took the forest path..."
                 )
-                document["game_output"].textContent = "You took the forest path..."
+                document["game_output"].textContent = forestpath_text
                 document["forest_button"].style.display = "none"
                 document["cave_button"].style.display = "none"
                 document["take_button"].style.display = "inline-block"
